@@ -4,11 +4,12 @@
 :root {
   --header-height: 3.5rem;
   /*===== Colors =====*/
-  --first-color: #A29596;
-  --primary: #A29596;
+  --first-color: #5F4947;
+  --primary: #5F4947;
   --second-color: #33303D;
   --black-color: #111111;
   --white-color: #FFF;
+  --color-hover: #5f4947a9;
   /*===== Font and typography =====*/
   --body-font: 'Roboto', sans-serif;
   --biggest-font-size: 1.5rem;
@@ -89,8 +90,8 @@ a {
     left: -100%;
     top: var(--header-height);
     background-color: var(--white-color);
-    width: 40%;
-    height: 50%;
+    width: 45%;
+    height: 65%;
     padding: 2rem;
     z-index: var(--z-fixed);
     transition: .3s;
@@ -112,6 +113,9 @@ a {
 }
 
 .nav__toggle {
+  cursor: pointer;
+}
+.nav__shop {
   cursor: pointer;
 }
 
@@ -285,9 +289,15 @@ a {
   border-radius: .5rem;
   transition: box-shadow .4s;
 }
+.price__button:hover {
+  background-color: var(--color-hover);
+  color: var(--white-color);
+  padding: 1.25rem 3.125rem;
+  border-radius: .5rem;
+  transition: box-shadow .4s;
+}
 
-/*===== BREAKPOINTS =====*/
-/* For small devices */
+/* Para pequenos dispositivos */
 @media screen and (max-width: 320px) {
   .home {
     row-gap: 1.5rem;
@@ -310,7 +320,7 @@ a {
   }
 }
 
-/* For medium devices */
+/* Para dispositivos médios */
 @media screen and (min-width: 480px) {
   .data__description {
     width: 350px;
@@ -351,7 +361,7 @@ a {
   }
 }
 
-/* For large devices */
+/* Para dispositivos grandes */
 @media screen and (min-width: 968px) {
   .nav {
     height: calc(var(--header-height) + 1.5rem);
@@ -400,6 +410,7 @@ a {
   }
 }
 
+/* Para dispositivos maiores padrao */
 @media screen and (min-width: 1200px) {
   .grid {
     margin-left: auto;
